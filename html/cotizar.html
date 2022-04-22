@@ -4,9 +4,171 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotizar</title>
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=IBM+Plex+Sans+Thai+Looped&family=Nunito:wght@800&family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://tenor.com/es/ver/spinning-loading-buffering-circles-gif-17305985">
+     <title>Cotizar</title>
 </head>
 <body>
+
+        <div class="sub-header">
+            <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4 col-sm-4">
+                <div class="right-icons">
+                    <ul>
+                    <li><a href="#"><i class="fi fi-brands-facebook"></i></a></li>
+                    <li><a href="#"><i class="fi fi-brands-twitter"></i></a></li>
+                    <li><a href="#"><i class="fi fi-brands-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
     
+      <!-- ***** Header Area Start ***** -->
+        <header class="header-area header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="main-nav">
+                            <!-- ***** Logo Start ***** -->
+                            <div href="../index.html" class="logo">
+                            <img src="../images/Logo.png" alt="Logo">
+                            </div>
+                            <!-- ***** Logo End ***** -->
+                            <!-- ***** Menu Start ***** -->
+                            <ul class="nav">
+                                <li><a href="../index.html">Inicio</a></li>
+                                <li><a>Descubí Confidence</a></li>
+                                <li><a href="../html/cotizar.html" class="active">Cotizar</a></li>
+                                <li><a href="#courses">Coberturas</a></li> 
+                                <li ><a href="../html/login.html">Iniciar Sesion</a></li>
+                                <li ><a href="#contact">Contacto</a></li> 
+                            </ul>        
+                            <a class='menu-trigger'>
+                                <span>Menu</span>
+                            </a>
+                            <!-- ***** Menu End ***** -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+          <!-- ***** Main Banner Area Start ***** -->
+         <section class="section main-banner background" id="top" data-section="section1">
+            
+           <div class="contenedor">
+
+                <section class="contenedorS sign-in">
+                    
+                    <form class="form" action="">
+                        <fieldset>
+                            <legend>Cotizá Online</legend>
+                            <div class="contenedorDiv">
+
+                               <div id="msj-error-cotizador"></div> 
+                                <div class="campo">
+                                    <label for="">Marca:</label>
+                                    <select name="marca" id="marca">
+                                        <option value="">--Seleccione--</option>
+                                        <option value="Chevrolet">Chevrolet</option>
+                                        <option value="Citroen">Citroen</option>
+                                        <option value="Ford">Ford</option>
+                                        <option value="Peugeot">Peugeot</option>
+                                        <option value="Volkswagen">Volkswagen</option>
+                                    </select>
+                                       
+                                 </div>
+                                
+                                <div class="campo">
+                                    <label for="">Modelo:</label>
+                                    <select name="modelo" id="modelo">
+                                        <option value="">--Seleccione--</option>
+                                        <option value="Cruze">Cruze Ltz 4p</option>
+                                        <option value="Ds3">Ds3 1.6 THP</option>
+                                        <option value="Focus">Focus sport 2.0 5p</option>
+                                        <option value="208">208 GTI 5p 1.6 THP</option>
+                                        <option value="Vento">Vento 2.0 GLI</option>
+                                    </select>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="">Año:</label>
+                                    <select name="year" id="year">
+                                        <option value="">--Seleccione--</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2012">2012</option>
+                                    </select>
+                                </div>
+                                <div class="campo">
+                                    <label>Plan</label>
+                                    <p>Basico:</p>
+                                    <input 
+                                            type="radio"
+                                            name="plan"
+                                            value="basico"
+                                            class="radio"
+                                            id="basico"
+                                            />
+                                            <p>Completo:</p>
+                                    <input 
+                                            type="radio"
+                                            name="plan"
+                                            value="completo"
+                                            class="radio"
+                                            id="completo"
+                                            />
+                                </div>
+                            
+                            </div>
+                            <div class="boton">
+                                <input type="submit" class="botonPrincipal" value="Cotizar">
+                            </div>
+                            
+                        </fieldset>
+                     
+                    </form>
+                    <div class="mensaje" id="msj">Elegir marca,año y tipo de seguro</div>
+                    <div id="resumen" style="display: none;">
+                    </div>
+                    <div class="" id="resultado" style="display: none;"></div>
+
+                </section>
+
+           </div>
+
+         </section>
+
+          <!-- ***** Main Banner Area End ***** -->
+
+        <!-- ***** Footer Area start ***** -->
+         <div class="footer">
+            <p>Copyright © 2022. 
+                <br>
+                    Design: <a href="">Jonatan Rodriguez</a>
+                <br>
+                
+            </p>
+        </div>
+  
+            <!-- ***** Footer Area End ***** -->
+        <script src="../js/cotizador.js" type="module"></script>
 </body>
 </html>

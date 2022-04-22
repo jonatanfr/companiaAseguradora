@@ -13,6 +13,7 @@ const listaDeUsuarios = [];
 
 
 
+
 class Usuario {
 
     constructor(nombre,email,telefono,password){
@@ -22,124 +23,89 @@ class Usuario {
         this.password = password;
     }
 
-    esEmail(){
+   
 
-        form.addEventListener("submit", e=>{
-            e.preventDefault()
-            let warning = ""
-            let entrar =false;
-            let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
+   
 
-            if(!regexEmail.test(email.value)){
-        
-                warning += '* Debe ingresar un email </br>'
-                entrar = true;
-                
-            }
-            
-            if(entrar){
-                parrafo.innerHTML = warning;
-            }
-        })
-    }
+}
 
-    esPassword(){
-
-        form.addEventListener("submit", e=>{
-            e.preventDefault()
-            let warning = ""
-            let entrar =false;
-            
-
-            if(pass.value.length<8){
-
-                warning += '* La contraseña debe ser mayor de 8 digito </br>'
-                entrar = true;
-               
-            }
-        
-            if(entrar){
-                parrafo.innerHTML = warning;
-            }
-        })
-    }
-
-    buscarUsuario(){
-        let existe=false;
-        let i = 0;
-        
     
+
+    const usuario1 = new Usuario(nombre,email,tel,pass);
+
+    const existeUsuario = () =>{
+        let i=0;
+        let existe = false;
+        let usu = new Usuario(nombre.value,email.value,tel.value,pass.value);
+        
+
         while(i<listaDeUsuarios.length || existe==false ){
-    
-            
-    
-            if(listaDeUsuarios.includes(email)){
+           
+            if(listaDeUsuarios.includes(usu)){
                 existe=true; 
                 console.log('existe usuario');
             }else{
                 existe=false;
                 i++;
             }
-    
         }
-    
         return existe;
     }
-
-}
-
-
-const usuario1 = new Usuario(nombre,email,tel,pass);
-
-
-
-
-    form.addEventListener("submit", e=>{
-        e.preventDefault()
-        let warnings = ""
-        let entrar =false;
-        let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
-        
-
-        if(nombre.value.length < 6){
-            
-            warnings += '* Debe ingresar un nombre </br>'
-            entrar = true;
-            
-        }
-        
-        if(!regexEmail.test(email.value)){
-            
-            warnings += '* Debe ingresar un email </br>'
-            entrar = true;
-            
-        }
-        if(tel.value.length < 10){
-            
-            warnings += '* Debe ingresar un telefono </br>'
-            entrar = true;
-            
-        }
-        if(pass.value.length<8){
-
-            warnings += '* La contraseña debe ser mayor de 8 digito </br>'
-            entrar = true;
-        
-        }
-
-        if(entrar){
-            parrafo.innerHTML = warnings;
-        }else{
-            
-            if(!usuario1.buscarUsuario()){
-                listaDeUsuarios.push(usuario1);
-            }else{
-                warnings += '* Ese Email ya esta registrado. </br>'
-                console.log('existe usuario con este mail');
-            }
-             
-
-        }
-    })
+     const agregarUsuario = () =>{
+        let usu = new Usuario(nombre.value,email.value,tel.value,pass.value);
+        listaDeUsuarios.push(usu);
+     }
 
    
+            
+     
+
+
+
+form.addEventListener("submit", e=>{
+    e.preventDefault()
+    let warnings = ""
+    let entrar =false;
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
+    
+
+    if(nombre.value.length < 6){
+        
+        warnings += '* Debe ingresar un nombre </br>'
+        entrar = true;
+        
+    }
+    
+    if(!regexEmail.test(email.value)){
+        
+        warnings += '* Debe ingresar un email </br>'
+        entrar = true;
+        
+    }
+    if(tel.value.length < 10){
+        
+        warnings += '* Debe ingresar un telefono </br>'
+        entrar = true;
+        
+    }
+    if(pass.value.length<8){
+
+        warnings += '* La contraseña debe ser mayor de 8 digito </br>'
+        entrar = true;
+    
+    }
+
+    if(entrar){
+        parrafo.innerHTML = warnings;
+    }else{
+        if(!existeUsuario()){
+            agregarUsuario();
+        }else{
+            warnings += '* Ese Email ya esta registrado. </br>'
+            console.log('existe usuario con este mail');
+        }
+        
+    }
+})
+
+
