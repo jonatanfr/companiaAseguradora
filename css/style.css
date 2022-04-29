@@ -54,7 +54,7 @@
 
   html,
 body {
-  background: #fff;
+  background: #1f272b;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
@@ -668,6 +668,7 @@ a {
   box-sizing: border-box;
   font-family: 'Krub', sans-serif;
   position: relative;
+  
 }
 
 .contenedor h2{
@@ -843,6 +844,87 @@ form::before{
  animation: mover 3s linear delay infinite;
 }
 
+.mensaje{
+  color: #a12c2f;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 17px;
+  position: absolute;
+  margin-top: 10px;
+  text-align: center;
+  display: none;
+}
+
+.mensajeError{
+  color: #a12c2f;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 17px;
+  position: absolute;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#resumen{
+  color: #a12c2f;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 17px;
+  display: flex;
+  position: relative;
+  margin-top: 1rem;
+  text-align: center;
+  margin-bottom: 80px;
+  display: none;
+  padding: 1rem;
+  
+}
+.divResultado{
+  text-align: center;
+  padding: 5rem;
+  border: 1px solid #26C6DA;
+  background-color: #a12c2f;
+  margin-top: 1rem;
+  position: relative;
+}
+.imgLoading{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  margin-left: 70px;
+  
+  margin-bottom: 180px;
+  margin-right: 100px;
+  display: none;
+}
+span.resultado{
+  position: relative;
+  width: 100%;
+}
+.resultado-enter{
+  transition: .5s;
+}
+.resultado-enter.resultado-enter-active{
+  transform: translateY(0%);
+}
+.resultado-exit{
+  transform: translateY(0);
+  transition:.5s;
+  position:absolute;
+  left: 0;
+  bottom:0;
+  right: 0;
+}
+.resultado-exit-active{
+  opacity: 0;
+  transform:translateY(-10%);
+}
+
+.divResultado{
+  text-align: center;
+  padding: 5rem;
+  border: 1px solid #26C6DA;
+  background-color: #a12c2f;
+  margin-top: 1rem;
+  position: relative;
+}
 
 
 
@@ -889,6 +971,7 @@ banner
     transform: translateY(-50%);
     margin-left: 40px;
   }
+
   
   
   .main-banner .caption h2 {
@@ -943,6 +1026,8 @@ banner
     z-index: 1111;
     border-top: 1px solid rgba(250,250,250,0.15);
     padding: 50px 0px;
+    margin-top: 100px;
+    
   }
   .footer p {
     text-transform: uppercase;

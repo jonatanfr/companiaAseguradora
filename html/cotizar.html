@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=IBM+Plex+Sans+Thai+Looped&family=Nunito:wght@800&family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://tenor.com/es/ver/spinning-loading-buffering-circles-gif-17305985">
+   
      <title>Cotizar</title>
 </head>
 <body>
@@ -69,12 +69,12 @@
 
                 <section class="contenedorS sign-in">
                     
-                    <form class="form" action="">
+                    <form class="form" id="form" action="">
                         <fieldset>
                             <legend>Cotizá Online</legend>
                             <div class="contenedorDiv">
 
-                               <div id="msj-error-cotizador"></div> 
+                               <div id="msj-error-cotizador" class="mensajeError"></div> 
                                 <div class="campo">
                                     <label for="">Marca:</label>
                                     <select name="marca" id="marca">
@@ -119,36 +119,26 @@
                                 </div>
                                 <div class="campo">
                                     <label>Plan</label>
-                                    <p>Basico:</p>
-                                    <input 
-                                            type="radio"
-                                            name="plan"
-                                            value="basico"
-                                            class="radio"
-                                            id="basico"
-                                            />
-                                            <p>Completo:</p>
-                                    <input 
-                                            type="radio"
-                                            name="plan"
-                                            value="completo"
-                                            class="radio"
-                                            id="completo"
-                                            />
-                                </div>
+                                    
+                                    <select name="plan" id="plan">
+
+                                        <option value="">--Seleccione--</option>
+                                        <option value="basico">Basico</option>
+                                        <option value="completo">Completo</option>
+                                      
+                                    </select>
                             
                             </div>
                             <div class="boton">
-                                <input type="submit" class="botonPrincipal" value="Cotizar">
+                                <input type="submit" class="botonPrincipal" id="btnCotizar" value="Cotizar">
                             </div>
                             
                         </fieldset>
                      
                     </form>
                     <div class="mensaje" id="msj">Elegir marca,año y tipo de seguro</div>
-                    <div id="resumen" style="display: none;">
-                    </div>
-                    <div class="" id="resultado" style="display: none;"></div>
+                    <div  id="resumen"><img class="imgLoading" src="../images/loading.gif" alt="loading"></div>
+                    <div class="" id="resultado" ></div>
 
                 </section>
 
@@ -169,6 +159,6 @@
         </div>
   
             <!-- ***** Footer Area End ***** -->
-        <script src="../js/cotizador.js" type="module"></script>
+        <script src="../js/cotizar.js"></script>
 </body>
 </html>
