@@ -10,20 +10,35 @@ class Cotizador {
     }
 }
 
+
+
 let listaDeCotizaciones = [];
 let btnCotizar = document.getElementById("btnCotizar");
 const form = document.getElementById("form");
 let divResumen=document.querySelector("#resumen");
 let divResultado=document.querySelector("#resultado");
 let imagenLoading = document.querySelector(".imgLoading");
-const marca = document.querySelector("#marca").value;
-const modelo = document.querySelector("#modelo").value;
-const year = parseInt(document.querySelector("#year").value);
-const plan = document.querySelector("#plan").value;
 
-const nuevaCotizacion = new Cotizador(marca,modelo,year,plan);
-console.log(nuevaCotizacion);
 
+
+
+
+/*
+'<h2>Resumen de Cotizacion</h2><ul><li>Marca: ${marca}</li><li>Modelo: ${modelo}</li> <li>Plan: ${plan}</li> <li>Año: ${year}</li></ul>';
+},3000);
+*/
+form.addEventListener('submit',function (e){
+    const marca = document.getElementById('marca').value;
+    const modelo = document.getElementById('modelo').value;
+    const year = document.getElementById('year').value;
+    const plan = document.getElementById('plan').value;
+    
+    const nuevaCotizacion= new Cotizador(marca,modelo,year,plan);
+    
+    e.preventDefault();
+    /* de aca*/
+    
+    
 const crearCotizacion = () => {
     
    
@@ -84,18 +99,17 @@ setTimeout(()=>{
     
     divResumen.style.borderRadius="8px";
     divResumen.style.position="absolute";
-    divResumen.style.width="min(60rem,100%)";
-    divResumen.style.height="200px";
+    divResumen.style.width="min(60rem,77%)";
+    divResumen.style.height="230px";
     divResumen.style.display="block";
-   
-    
     divResumen.style.marginRight="440px";
-    divResumen.innerHTML = '<h2> Resumen de cotizacion </H2> <ul> <li> <li>Marca: '+ marca +'</li><li>Modelo: '+modelo+'</li> <li>Año: '+year+'</li> <li>Plan: '+plan+'</li></ul>';
 
     let cotizacionFinal = cotizar(nuevaCotizacion);
-    divResultado.style.display="block";
-    divResultado.className = "divResultado";
-    divResultado.innerHTML='<p class="textoCotizacion">Total: $'+cotizacionFinal+'</p>';
+
+    divResumen.innerHTML = '<h3> Resumen de cotización </H3> <ul> <li>Marca: '+ marca +'</li><li>Modelo: '+modelo+'</li> <li>Año: '+year+'</li> <li>Plan: '+plan+'</li><li>Total: $'+cotizacionFinal+'</li></ul>';
+
+    
+
 },3000);
 
 
@@ -164,17 +178,16 @@ const diferencia=(year)=>{
 }
 
 
-btnCotizar.addEventListener("click",(e) => {
-    e.preventDefault();
-
+    /*hasta aca*/
     guardar();
     enviarFormulario();
     mostrarResumen();
+
     
 })
 
-/*
-'<h2>Resumen de Cotizacion</h2><ul><li>Marca: ${marca}</li><li>Modelo: ${modelo}</li> <li>Plan: ${plan}</li> <li>Año: ${year}</li></ul>';
-},3000);
-*/
+
+
+
+
 

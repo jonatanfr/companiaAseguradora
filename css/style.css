@@ -845,18 +845,21 @@ form::before{
 }
 
 .mensaje{
-  color: #a12c2f;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #1f272b;
+  font-weight: bold;
+  background-color: #f5a425;
+  font-family: 'Poppins', sans-serif;
   font-size: 17px;
-  position: absolute;
-  margin-top: 10px;
+  margin-top: 2rem;
+  padding: 1rem;
   text-align: center;
-  display: none;
+  border-radius: 8px;
+  
 }
 
 .mensajeError{
   color: #a12c2f;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 17px;
   position: absolute;
   margin-top: 10px;
@@ -864,25 +867,26 @@ form::before{
 }
 
 #resumen{
-  color: #a12c2f;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 17px;
-  display: flex;
-  position: relative;
-  margin-top: 1rem;
-  text-align: center;
-  margin-bottom: 80px;
-  display: none;
   padding: 1rem;
+  text-align:left;
+  background-color: rgba(235,228,228,0.034);
+  color: rgba(186, 180, 180, 0.936);
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  margin-top: 1rem;
+  display: none;
+  
   
 }
 .divResultado{
   text-align: center;
   padding: 5rem;
-  border: 1px solid #26C6DA;
-  background-color: #a12c2f;
-  margin-top: 1rem;
+  border: 1px solid;
+  background-color: rgba(235,228,228,0.034);
+  margin-top: 10rem;
   position: relative;
+  border-radius: 8px;
+ 
 }
 .imgLoading{
   width: 200px;
@@ -917,13 +921,13 @@ span.resultado{
   transform:translateY(-10%);
 }
 
-.divResultado{
-  text-align: center;
-  padding: 5rem;
-  border: 1px solid #26C6DA;
-  background-color: #a12c2f;
-  margin-top: 1rem;
-  position: relative;
+
+.textoCotizacion{
+  color: rgba(186, 180, 180, 0.936);
+  padding:1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
 }
 
 
