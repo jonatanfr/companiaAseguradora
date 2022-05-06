@@ -84,11 +84,14 @@ function enviarFormulario(){
 
 const mostrarResumen = () => {
     
-    document.querySelector("#msj").style.display="none";
+   // document.querySelector("#msj").style.display="none";
+   $("#msj").css("display","none");
 
 divResumen.style.backgroundColor="#1f272b";
 divResumen.style.display="block";
-imagenLoading.style.display="block";
+//imagenLoading.style.display="block";
+
+$("imagenLoading").css("display","block");
 divResumen.style.margin="60px";
 divResumen.style.marginLeft="0px";
 
@@ -107,7 +110,9 @@ setTimeout(()=>{
     let cotizacionFinal = cotizar(nuevaCotizacion);
 
     divResumen.innerHTML = '<h3> Resumen de cotización </H3> <ul> <li>Marca: '+ marca +'</li><li>Modelo: '+modelo+'</li> <li>Año: '+year+'</li> <li>Plan: '+plan+'</li><li>Total: $'+cotizacionFinal+'</li></ul>';
-
+    $("h3").addClass("italic");
+    
+    
     
 
 },3000);
