@@ -1,0 +1,4 @@
+[
+    {"Plan":"Basico", "Granizo":"No","Robo de Ruedas":"No","Choque": "Si"},
+    {"plan":"Completo", "granizo":"Si","roboDeRuedas":"Si","choque": "Si"}
+]

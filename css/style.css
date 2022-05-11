@@ -878,6 +878,13 @@ form::before{
   
   
 }
+.swal-overlay {
+  background-color: rgba(144, 140, 140, 0.06);
+}
+
+
+
+
 .divResultado{
   text-align: center;
   padding: 5rem;

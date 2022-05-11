@@ -18,6 +18,7 @@ const form = document.getElementById("form");
 let divResumen=document.querySelector("#resumen");
 let divResultado=document.querySelector("#resultado");
 let imagenLoading = document.querySelector(".imgLoading");
+const infoPlanes = document.querySelector(".infoPlanes");
 
 
 
@@ -112,7 +113,29 @@ setTimeout(()=>{
     divResumen.innerHTML = '<h3> Resumen de cotización </H3> <ul> <li>Marca: '+ marca +'</li><li>Modelo: '+modelo+'</li> <li>Año: '+year+'</li> <li>Plan: '+plan+'</li><li>Total: $'+cotizacionFinal+'</li></ul>';
     $("h3").addClass("italic");
     
-    
+    swal({
+        title: "Felicitaciones!",
+        text: "Has contratado Confidence",
+        icon: "success",
+        button: "Confirmar",
+      });
+
+      const obtenerPlanes = ()=>{
+
+        fetch("infoPlanes")
+            .then(response => response.json())
+            .then((result) => {
+                    let datos = result;
+                    datos.array.forEach(plan => {
+                        infoPlanes.innerHTML +=`
+                            <h3>"Plan: "${plan.plan}</h3>
+                            <p>"Granizo: "${plan.granizo}</p>
+                            <p>"Robo de Ruedas: "${plan.roboDeRuedas}</p>
+                            <p>"Granizo: "${plan.choque}</p>`
+                    });
+            })
+            .catch(error => console.log(error))
+      }
     
 
 },3000);
