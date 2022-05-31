@@ -171,7 +171,9 @@ a {
 /*HEADER*/
 
 
-
+header{
+  z-index: 100;
+}
 
 .sub-header {
     background-color: #1f272b;
@@ -662,7 +664,7 @@ a {
   display: flex;
   border-radius: 8px;
   box-shadow: 0 0 40px - 10px #000;
-  margin: calc(50vh - 220px) auto;
+  margin: calc(50vh - 120px) auto;
   padding: 20px 30px;
   max-width: calc(100vw - 40px);
   box-sizing: border-box;
@@ -810,6 +812,20 @@ input:hover{
   background-color: rgba(250,250,250,0.15);
 }
 
+.btnConfirmar{
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  width: 20%;
+  color:rgb(250, 243, 243);
+  font-size: 1rem;
+  border-radius: 1rem;
+  margin: 0 0 0 0;
+  height: 2rem;
+  font-weight: 800;
+  background-color: rgba(250,250,250,0.15);
+}
+
+
 .contenedor h3{
   text-align: center;
   margin: 1rem 0;
@@ -826,10 +842,74 @@ input:hover{
   background-color:  rgb(250, 243, 243);
 }
 
+
+
 .contenedor a:hover{
   cursor: pointer;
-  color: #3B566E;
-  font-size: 2rem;
+  color: gray;
+  
+}
+
+.botonLista:hover{
+  cursor:pointer;
+  color: gray;
+  background-color:  rgb(250, 243, 243);
+  
+}
+
+
+
+.textColumns{
+ background-color:rgb(179, 100, 3);
+  
+}
+
+table{
+  
+  border-radius: 8px;
+  text-align: center;
+  background-color: #f5a425;
+}
+
+
+.table-center{
+  
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 0 40px - 10px #f5a425;
+  margin: calc(50vh - 120px) auto;
+  margin-bottom: 50px;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  font-family: 'Krub', sans-serif;
+  position: relative;
+}
+
+.itemCotizacionTotal{
+  margin-left: 12px;
+}
+
+
+a .botonLista {
+    
+     
+      font-family: Arial, Helvetica, sans-serif;
+      border: none;
+      width: 100%;
+      color:rgb(250, 243, 243);
+      font-size: 1rem;
+      border-radius: 1rem;
+      position: relative;
+      margin: 1rem 0 0 0;
+      height: 2rem;
+      font-weight: 800;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      background-color: rgba(250,250,250,0.15);
+    
 }
 
 form::before{
@@ -856,6 +936,7 @@ form::before{
   border-radius: 8px;
   
 }
+
 
 .mensajeError{
   color: #a12c2f;
@@ -1048,5 +1129,10 @@ banner
   
   .footer p a {
     color: #f5a425;
+  }
+
+  .tab-pane {
+    color:#f7f7f7;
+    font-size: 25px;
   }
   
